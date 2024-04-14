@@ -1,0 +1,27 @@
+@import 'src/assets/styles/variables.scss';
+
+.home {
+	flex: 1 1 auto;
+
+	.card {
+		flex: 1 1 auto;
+		padding: 2rem;
+		border: 1xp solid $surface-border;
+		border-radius: 12px;
+		background-color: $white;
+		box-shadow: 0px 0px 1px rgba($color: $gray, $alpha: 0.9);
+	}
+
+	.form {
+		margin-top: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.filterTitle {
+		font-size: 1.25rem;
+		margin: 0 0 1rem;
+		font-weight: 500;
+		line-height: 1.2;
+		color: $surface-900;
+	}
+}

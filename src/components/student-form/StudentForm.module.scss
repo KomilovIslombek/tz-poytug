@@ -1,0 +1,76 @@
+@import 'src/assets/styles/variables.scss';
+
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr 0.7fr 0.3fr;
+	align-items: flex-start;
+	gap: 10px;
+
+	@media (max-width: 750px) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	@media (max-width: 550px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	& > .button {
+		background: $p-light-500;
+		color: $white;
+		border-color: $p-light-500;
+		background: $p-focus-color;
+		border: 1px solid $p-focus-color;
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		transition: all 0.2s;
+		border-radius: 6px;
+		outline-color: transparent;
+		user-select: none;
+
+		&:not(:disabled):hover {
+			background: $p-light-500;
+			color: $white;
+			border-color: $p-light-500;
+		}
+	}
+
+	input {
+		border-radius: 6px;
+		margin-bottom: 0.7rem;
+		outline: none;
+		box-shadow:
+			0 0 #0000,
+			0 0 #0000,
+			0 1px 2px 0 rgba(18, 18, 23, 0.05);
+		width: 100%;
+		font-size: 1rem;
+		color: #334155;
+		background: #ffffff;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid #cbd5e1;
+
+		&:focus {
+			outline: 1px solid $p-focus-color;
+			outline-offset: -1px;
+			box-shadow: none;
+			border-color: #94a3b8;
+		}
+
+		&::placeholder {
+			color: #946e86;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		}
+
+		&[type='number'] {
+			-moz-appearance: textfield; /* Firefox */
+		}
+	}
+}

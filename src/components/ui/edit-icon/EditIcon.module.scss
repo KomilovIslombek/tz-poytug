@@ -1,0 +1,15 @@
+@import 'src/assets/styles/variables.scss';
+
+.editButton {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	text-align: left;
+	// padding-inline: 0.7em;
+
+	svg {
+		font-size: 20px;
+		color: rgba($green-500, 0.7);
+	}
+}
